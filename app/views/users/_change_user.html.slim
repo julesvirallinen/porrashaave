@@ -1,0 +1,14 @@
+div.card.card-body
+  /=link_to("Uusi käyttäjä", new_user_path,  {:class=> "btn btn-warning"} )
+  button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#newUser" aria-expanded="false" aria-controls="collapseExample"
+    | Luo käyttäjä
+  div.collapse#newUser
+    br
+    == render 'users/form', user: @user
+
+
+  = bootstrap_form_tag(url: "/visitors#set_user") do |f|
+    br
+    = f.select :user_id, options_for_select(User.all.map {|u| [u.name, u.id]}),  {:hide_label => true, :class => "form-control"}
+
+    = f.submit("Aseta")

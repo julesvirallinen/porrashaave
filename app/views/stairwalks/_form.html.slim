@@ -1,0 +1,16 @@
+= bootstrap_form_for @stairwalk do |f|
+  /- if @stairwalk.errors.any?
+  /  #error_explanation
+  /    h2 = "#{pluralize(@stairwalk.errors.count, "error")} prohibited this stairwalk from being saved:"
+  /    ul
+  /      - @stairwalk.errors.full_messages.each do |message|
+  /        li = message
+
+  .field
+    br
+    a data-toggle = "collapse" href="#datePicker" aria-controls="datePicker"
+      | vaihda pvm
+    div.collapse#datePicker
+      = f.date_select :date
+    = f.hidden_field :user_id, {:value => current_user.id}
+  .actions = f.submit("KÄVELE")

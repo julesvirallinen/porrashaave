@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Date:
+  = @stairwalk.date
+p
+  strong User:
+  = @stairwalk.user
+
+= link_to 'Edit', edit_stairwalk_path(@stairwalk)
+'  |
+= link_to 'Back', stairwalks_path

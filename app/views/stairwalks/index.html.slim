@@ -1,0 +1,23 @@
+h1 Listing stairwalks
+
+table
+  thead
+    tr
+      th Date
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @stairwalks.each do |stairwalk|
+      tr
+        td = stairwalk.date
+        td = stairwalk.user
+        td = link_to 'Show', stairwalk
+        td = link_to 'Edit', edit_stairwalk_path(stairwalk)
+        td = link_to 'Destroy', stairwalk, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Stairwalk', new_stairwalk_path
