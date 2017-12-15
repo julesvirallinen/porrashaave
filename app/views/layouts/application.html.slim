@@ -2,12 +2,18 @@ doctype html
 html
   head
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title "Porrashaave"
+    title Porrashaave
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     = csrf_meta_tags
+    link href="https://fonts.googleapis.com/css?family=Vollkorn+SC|Source+Sans+Pro" rel="stylesheet"
   body
     header
     main role= "main"
+      div#titlediv
+        h1#title Porrashaaste 2018
+        br
       = render 'layouts/messages'
       = yield
+      div#footer
+        = image_tag 'credits.png', :id => 'footerimage'

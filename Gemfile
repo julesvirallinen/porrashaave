@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'bootstrap_form'
+gem "font-awesome-rails"
 
 
 group :development, :test do

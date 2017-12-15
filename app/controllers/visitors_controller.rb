@@ -8,8 +8,12 @@ class VisitorsController < ApplicationController
   end
 
 
-
   def set_user
     session[:current_user_id] = params[:user_id]
+
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Jee welcome' }
+    end
+
   end
 end

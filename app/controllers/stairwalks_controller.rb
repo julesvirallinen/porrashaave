@@ -28,11 +28,11 @@ class StairwalksController < ApplicationController
 
     respond_to do |format|
       if @stairwalk.save
-        format.html { redirect_to @stairwalk, notice: 'Stairwalk was successfully created.' }
-        format.json { render :show, status: :created, location: @stairwalk }
+        format.html { redirect_to root_path, notice: 'Whooa, hyvä sä! :D.' }
+        # format.json { render :show, status: :created, location: @stairwalk }
       else
-        format.html { render :new }
-        format.json { render json: @stairwalk.errors, status: :unprocessable_entity }
+        format.html { render :back }
+        # format.json { render json: @stairwalk.errors, status: :unprocessable_entity }
       end
     end
   end

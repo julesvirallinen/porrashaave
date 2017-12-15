@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :stairwalks
+  has_many :goals
 
 
   def walk_count

@@ -1,8 +1,9 @@
 - if current_user
-  h3 Heippa #{current_user.name}!
-  button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#changeUser" aria-expanded="false" aria-controls="collapseExample"
-    | Not #{current_user.name}??
-    br
+  h4
+    |Heippa #{current_user.name + "!  "}
+
+    button class="btn btn-sm btn-blu" type="button" data-toggle="collapse" data-target="#changeUser" aria-expanded="false" aria-controls="collapseExample" Not #{current_user.name}??
+
 
 
   div.collapse#changeUser
@@ -17,4 +18,12 @@ br
   == render('stairwalks/form')
 
   div.card.card-body
-    | #{'Olet kävellyt yhteensä ' +  current_user.walk_count + ' kertaa porraspillurallin! Portaita siis yhteensä ' + current_user.stair_count}
+    | #{'Olet kävellyt yhteensä ' +  current_user.walk_count + ' kertaa uuden portaat! Portaita siis yhteensä ' + current_user.stair_count}
+
+  br
+  /
+  /div.card.card-group
+  /  div.card.card-header Tavoitteet
+  /div.card.card-body
+  /  p Joulukuu:
+  /  progress.goal max=current_user.goals.first.goal value="3"

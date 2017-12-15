@@ -1,3 +1,16 @@
 // Place all the styles related to the Stairwalks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#submit {
+  display: flex;
+  margin-bottom: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+#kavelynappi {
+  height: 100px;
+  font-size: 3em;
+  font-weight: 900;
+}

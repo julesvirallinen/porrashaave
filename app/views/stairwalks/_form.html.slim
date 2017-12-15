@@ -8,9 +8,12 @@
 
   .field
     br
-    a data-toggle = "collapse" href="#datePicker" aria-controls="datePicker"
-      | vaihda pvm
-    div.collapse#datePicker
-      = f.date_select :date
+
     = f.hidden_field :user_id, {:value => current_user.id}
-  .actions = f.submit("KÄVELE")
+  span#submit
+    .actions = f.submit("Kävelin 💪", :id => 'kavelynappi')
+    a#icon data-toggle = "collapse" href="#datePicker" aria-controls="datePicker"
+      | #{fa_icon :gears}
+
+  div.collapse#datePicker.form-centered
+    = f.date_select :date

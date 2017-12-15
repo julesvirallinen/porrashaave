@@ -12,6 +12,69 @@
  *
  *= require_tree .
  *= require_self
+ @import "bootstrap";
  *= require rails_bootstrap_forms
+ *= require font-awesome
+
  */
+
+
+body {
+  background: #f3904f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f3904f, #3b4371); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f3904f, #3b4371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.card {
+  background-color: rgba(211, 198, 198, 0.2);
+
+}
+
+.btn {
+  background-color: rgba(44, 40, 255, 0.2);
+
+}
+
+#title {
+  font-family: 'Vollkorn SC', serif;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+#titlediv {
+  //display: inline-block;
+  //padding: 10px 5px 0px 5px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-color: rgba(102, 1, 2, 0.34);
+
+}
+
+#icon {
+  color: rgba(0, 0, 0, 0.68);
+  padding-left: 10px;
+  font-size: 25px;
+
+  position: relative;
+}
+
+.goal {
+  width: 100%;
+}
+
+
+
+#footer {
+  margin: 0 auto;
+}
+
+#footerimage {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+
+}
 
