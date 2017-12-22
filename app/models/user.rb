@@ -10,4 +10,10 @@ class User < ApplicationRecord
   def stair_count
     (stairwalks.count*91*2).to_s
   end
+
+  def walks_since(date)
+    stairwalks.where("date >= ?", date).count
+  end
+
+
 end

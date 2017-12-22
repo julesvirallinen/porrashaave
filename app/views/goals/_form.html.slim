@@ -6,9 +6,7 @@
         - @goal.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :user
-    = f.text_field :user
+  = f.hidden_field :user_id, {:value => current_user.id}
   .field
     = f.label :start
     = f.date_select :start

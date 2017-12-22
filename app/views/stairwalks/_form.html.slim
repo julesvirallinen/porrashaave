@@ -12,8 +12,16 @@
     = f.hidden_field :user_id, {:value => current_user.id}
   span#submit
     .actions = f.submit("Kävelin 💪", :id => 'kavelynappi')
-    a#icon data-toggle = "collapse" href="#datePicker" aria-controls="datePicker"
+    a.icon data-toggle = "collapse" href="#datePicker" aria-controls="datePicker"
       | #{fa_icon :gears}
+    a.icon data-toggle = "collapse" href="#info" aria-controls="info"
+      | #{fa_icon :info}
+
 
   div.collapse#datePicker.form-centered
     = f.date_select :date
+
+  div.collapse#info
+    div.card.card-body
+     | Yksi porraskävely on HYYn toimistolta viidenteen kerrokseen, ja takaisin alas. Kyseisellä matkalla portaita on 91!
+    br

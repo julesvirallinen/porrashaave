@@ -1,0 +1,9 @@
+div.card-block
+  h3.card-header
+    = title_and_goal(goal)
+    small
+      = goal_dates(goal)
+  div.card.card-body
+    progress.goal max=goal.goal value=progress(goal)
+    small
+      = goal_info(goal)

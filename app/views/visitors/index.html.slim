@@ -1,10 +1,7 @@
 - if current_user
   h4
     |Heippa #{current_user.name + "!  "}
-
     button class="btn btn-sm btn-blu" type="button" data-toggle="collapse" data-target="#changeUser" aria-expanded="false" aria-controls="collapseExample" Not #{current_user.name}??
-
-
 
   div.collapse#changeUser
     == render('users/change_user')
@@ -13,17 +10,12 @@
 
 br
 - if current_user
-  div.card.card-body
-    | Yksi porraskävely on HYYn toimistolta viidenteen kerrokseen, ja takaisin alas. Kyseisellä matkalla portaita on 91!
   == render('stairwalks/form')
 
   div.card.card-body
     | #{'Olet kävellyt yhteensä ' +  current_user.walk_count + ' kertaa uuden portaat! Portaita siis yhteensä ' + current_user.stair_count}
 
   br
-  /
-  /div.card.card-group
-  /  div.card.card-header Tavoitteet
-  /div.card.card-body
-  /  p Joulukuu:
-  /  progress.goal max=current_user.goals.first.goal value="3"
+  - if current_user&.goals.first
+    == render 'goals/show', :goal => current_user.goals.first, :progress => current_user.stairwalks.count
+
