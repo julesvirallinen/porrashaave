@@ -18,4 +18,9 @@ br
   br
   - if current_user&.goals.first
     == render 'goals/show', :goal => current_user.goals.first, :progress => current_user.stairwalks.count
+  br
+  button.btn.btn-sm.btn-blu data-toggle = "collapse" href="#newGoal" aria-controls="newGoal" Uusi tavoite
+  br
+  div.collapse#newGoal
+    == render 'goals/form'
 

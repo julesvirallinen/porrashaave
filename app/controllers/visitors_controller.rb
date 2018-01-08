@@ -5,6 +5,7 @@ class VisitorsController < ApplicationController
     # @current_user = User.find(session[:current_user_id]).name
     @stairwalk = Stairwalk.new
     @user = User.new
+    @goal = Goal.new
   end
 
 

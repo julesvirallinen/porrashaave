@@ -8,15 +8,15 @@
 
   = f.hidden_field :user_id, {:value => current_user.id}
   .field
-    = f.label :start
+    = f.label :aloituspäivä
     = f.date_select :start
   .field
-    = f.label :end
+    = f.label :lopetuspäivä
     = f.date_select :end
   .field
-    = f.label :title
+    = f.label :otsikko
     = f.text_field :title
   .field
-    = f.label :goal
+    = f.label :tavoitemäärä
     = f.number_field :goal
   .actions = f.submit
