@@ -4,7 +4,7 @@ class StairwalksController < ApplicationController
   # GET /stairwalks
   # GET /stairwalks.json
   def index
-    @stairwalks = current_user.stairwalks
+    @stairwalks = current_user.stairwalks.order(date: :desc)
   end
 
   # GET /stairwalks/1

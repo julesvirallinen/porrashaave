@@ -7,3 +7,7 @@ div.card-block
     progress.goal max=goal.goal value=progress(goal)
     small
       = goal_info(goal)
+      '
+      = link_to (fa_icon :trash), goal, data: { confirm: 'Haluutko oikeesti poistaa tän?' }, method: :delete
+      '
+      = link_to (fa_icon :pencil), edit_goal_path(goal)
