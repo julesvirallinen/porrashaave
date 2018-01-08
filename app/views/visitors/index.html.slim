@@ -1,7 +1,7 @@
 - if current_user
-  h4
+  strong
     |Heippa #{current_user.name + "!  "}
-    button class="btn btn-sm btn-blu" type="button" data-toggle="collapse" data-target="#changeUser" aria-expanded="false" aria-controls="collapseExample" Not #{current_user.name}??
+    button class="btn btn-sm btn-blu" type="button" data-toggle="collapse" data-target="#changeUser" aria-expanded="false" aria-controls="collapseExample" Vaihda käyttäjää
 
   div.collapse#changeUser
     == render('users/change_user')
@@ -12,8 +12,9 @@ br
 - if current_user
   == render('stairwalks/form')
 
-  div.card.card-body
-    | #{'Olet kävellyt yhteensä ' +  current_user.walk_count + ' kertaa uuden portaat! Portaita siis yhteensä ' + current_user.stair_count}
+  - if current_user.goals.empty?
+    div.card.card-body
+      | Aloita luomalla tavoite allaolevalla napilla! Yritä vaikka tämän kuukauden aikana kävellä 15 kertaa portaat :)
 
   br
   - current_user.goals.each do |goal|
