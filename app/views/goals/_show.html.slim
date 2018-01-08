@@ -1,5 +1,5 @@
-div.card-block
-  h3.card-header
+div.card
+  strong.card-header
     = title_and_goal(goal)
     small
       = goal_dates(goal)
@@ -11,3 +11,4 @@ div.card-block
       = link_to (fa_icon :trash), goal, data: { confirm: 'Haluutko oikeesti poistaa tän?' }, method: :delete
       '
       = link_to (fa_icon :pencil), edit_goal_path(goal)
+br

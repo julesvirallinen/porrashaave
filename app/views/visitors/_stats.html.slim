@@ -1,0 +1,28 @@
+div.card
+  strong.card-header
+    | Tilastoa!
+  div.card-body#stats
+    h4 Omat:
+
+    | Edelliset 7 päivää:
+    span.badge.badge-pill.badge-success = stairs(current_user.total_walks_past(7))
+    span.badge.badge-pill.meta = current_user.total_walks_past(7)
+    br
+    | Edelliset 30 päivää:
+    span.badge.badge-pill.badge-success = stairs(current_user.total_walks_past(30))
+    span.badge.badge-pill.meta = current_user.total_walks_past(30)
+    br
+    ' Portaita kävelty yhteensä:
+    span.badge.badge-pill.badge-success = stairs(current_user.walk_count).to_s
+    span.badge.badge-pill.meta = current_user.walk_count
+    br
+    br
+    h4 Kaikille:
+
+    | Portaita kävelty yhteensä:
+    span.badge.badge-pill.badge-success = stairs(total_walks)
+    span.badge.badge-pill.meta = total_walks
+    br
+    | Edelliset 7 päivää:
+    span.badge.badge-pill.badge-success = stairs(total_walks_days(7))
+    span.badge.badge-pill.meta = total_walks_days(7)

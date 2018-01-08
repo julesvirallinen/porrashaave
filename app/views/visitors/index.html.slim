@@ -16,11 +16,13 @@ br
     | #{'Olet kävellyt yhteensä ' +  current_user.walk_count + ' kertaa uuden portaat! Portaita siis yhteensä ' + current_user.stair_count}
 
   br
-  - if current_user&.goals.first
-    == render 'goals/show', :goal => current_user.goals.first, :progress => current_user.stairwalks.count
-  br
+  - current_user.goals.each do |goal|
+    == render 'goals/show', :goal => goal
   button.btn.btn-sm.btn-blu data-toggle = "collapse" href="#newGoal" aria-controls="newGoal" Uusi tavoite
   br
   div.collapse#newGoal
     == render 'goals/form'
+  br
+
+  == render 'stats'
 
