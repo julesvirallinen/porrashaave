@@ -17,6 +17,13 @@ div.card
     span.badge.badge-pill.meta = current_user.walk_count
     br
     br
+
+    = week_calendar events: current_user.stairwalks do |date, walks|
+      /= date
+      - walks.each do |walk|
+
+        /| I
+
     h4 Kaikille:
 
     | Portaita kävelty yhteensä:

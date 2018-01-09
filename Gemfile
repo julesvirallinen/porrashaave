@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'bootstrap_form'
 gem "font-awesome-rails"
+gem "simple_calendar", "~> 2.0"
 
 
 group :development, :test do
