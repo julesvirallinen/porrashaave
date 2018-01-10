@@ -18,11 +18,10 @@ div.card
     br
     br
 
-    = week_calendar events: current_user.stairwalks do |date, walks|
-      /= date
+    = week_calendar :start_date => 1.week.ago, number_of_weeks: 2, events: current_user.stairwalks do |date, walks|
+    /= SimpleCalendar::BusinessWeekCalendar.new(self, {}).render  do |date, walks|
       - walks.each do |walk|
 
-        /| I
 
     h4 Kaikille:
 

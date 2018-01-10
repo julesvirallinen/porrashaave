@@ -10,3 +10,23 @@
 .meta {
   color: #666666;
 }
+
+
+
+.simple-calendar .day {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+
+.has-events {
+  background-color: #498b00 !important;
+}
+
+.simple-calendar > .table{
+  max-width: 200px;
+}
+
+.calendar-heading {
+  color: #666666;
+}
