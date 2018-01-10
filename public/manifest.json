@@ -1,0 +1,16 @@
+{
+  "name": "Porrashaaste -18",
+  "icons": [
+
+    {
+      "src": "launcher-icon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 3.0
+    }
+
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
