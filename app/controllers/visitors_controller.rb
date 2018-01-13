@@ -6,6 +6,7 @@ class VisitorsController < ApplicationController
     @stairwalk = Stairwalk.new
     @user = User.new
     @goal = Goal.new
+    @stairwalks = Stairwalk.all.where("date >= ?", Date.today - 2.weeks)
   end
 
 

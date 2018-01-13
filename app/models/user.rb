@@ -21,6 +21,12 @@ class User < ApplicationRecord
     stairwalks.where("date > ?", Time.now-days.days).count.to_s
   end
 
+  def walks_on_date(date)
+    s = stairwalks.where("date = ?", date).count
+    if s>0
+      s.to_s
+    end
+  end
 
 
 end

@@ -19,6 +19,8 @@ div.card
     br
 
     = week_calendar :start_date => 1.week.ago, number_of_weeks: 2, events: current_user.stairwalks do |date, walks|
+      div.walknum
+        = current_user.walks_on_date(date)
     /= SimpleCalendar::BusinessWeekCalendar.new(self, {}).render  do |date, walks|
       - walks.each do |walk|
 
@@ -32,3 +34,7 @@ div.card
     | Edelliset 7 päivää:
     span.badge.badge-pill.badge-success = stairs(total_walks_days(7))
     span.badge.badge-pill.meta = total_walks_days(7)
+
+    = week_calendar :start_date => 1.week.ago, number_of_weeks: 2, events: @stairwalks do |date, walks|
+      div.walknum
+        = walks_on_date(date)

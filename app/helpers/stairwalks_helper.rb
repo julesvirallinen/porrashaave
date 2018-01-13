@@ -7,6 +7,13 @@ module StairwalksHelper
     Stairwalk.all.where("date > ?", Time.now-days.days).count
   end
 
+  def walks_on_date(date)
+    s = Stairwalk.all.where("date = ?", date).count
+    if s>0
+      s.to_s
+    end
+  end
+
 
 
   def stairs(n)
