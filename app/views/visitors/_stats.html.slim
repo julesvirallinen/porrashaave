@@ -35,6 +35,6 @@ div.card
     span.badge.badge-pill.badge-success = stairs(total_walks_days(7))
     span.badge.badge-pill.meta = total_walks_days(7)
 
-    = week_calendar :start_date => 1.week.ago, number_of_weeks: 2, events: @stairwalks do |date, walks|
+    = calendar :start_date => 1.week.ago, number_of_days: 14, events: @stairwalks do |date, walks|
       div.walknum
         = walks_on_date(date)

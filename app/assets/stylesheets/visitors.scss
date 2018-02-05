@@ -18,10 +18,18 @@
   width: 30px !important;
 }
 
+.simple-calendar .next-month {
+  background-color: #dd767f !important;
+}
 
-.has-events {
+.simple-calendar .future {
+  background-color: transparent !important;
+}
+
+.simple-calendar .has-events {
   background-color: #498b00 !important;
 }
+
 
 .simple-calendar > .table{
   max-width: 200px;
